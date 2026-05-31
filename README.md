@@ -1,6 +1,6 @@
 # 🏏 Kohlified, or not?
 
-`Kohlified, or not?` is a high-performance full-stack web application designed for cricket stance diagnostics. Calibrating its technical rigor to different player experience levels, the app utilizes the **Google Gemini 3 Flash Preview Vision API** to review athlete setups, pinpoint flaws, score batting stances on a strict 1-10 rubric, and prescribe targeted net drills.
+`Kohlified, or not?` is a high-performance full-stack web application designed for cricket stance diagnostics. Calibrating its technical rigor to different player experience levels, the app utilizes the **Google Gemini 3 Flash Preview API** to review athlete setups, pinpoint flaws, score batting stances on a strict 1-10 rubric, and prescribe targeted net drills.
 
 ---
 
@@ -9,7 +9,7 @@
 - **Frontend**: React 18 + Vite, React Router 6, Axios with JWT interceptors.
 - **Backend**: Spring Boot 3.3 + Java 21, Spring Security 6 (Stateless JWT authentication).
 - **Database**: PostgreSQL (JPA / Hibernate data persistence).
-- **AI Engine**: Google Gemini 3 Flash Preview (Vision-enabled multi-modal model).
+- **AI Engine**: Google Gemini 3 Flash Preview (gemini-3.1-flash-lite).
 
 ---
 
