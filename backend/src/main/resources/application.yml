@@ -1,0 +1,40 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+      exclude: static/**,public/**,templates/**,*.git
+    livereload:
+      enabled: true
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/ghostcoach?options=-c%20timezone=UTC}
+    username: ${DB_USERNAME:ghost}
+    password: ${DB_PASSWORD:ghost123}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:ghost-coach-jwt-secret-key-that-is-at-least-256-bits-long-for-hs256}
+    expiration-ms: 86400000
+  upload:
+    dir: ./uploads
+  gemini:
+    api-key: ${GEMINI_API_KEY}
+    model: ${GEMINI_MODEL:gemini-3.1-flash-lite}
+    endpoint: https://generativelanguage.googleapis.com/v1beta/models
+  security:
+    cors:
+      allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173}
